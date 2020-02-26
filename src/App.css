@@ -3,6 +3,17 @@
   --red: #ff2d2b;
 }
 
+.game {
+  display: flex;
+  justify-content: center;
+  border: 3px solid gray;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: blueviolet;
+  font-size: 7rem;
+  /* width: 15rem; */
+}
+
 .scoreboard {
   width: 58%;
   margin: 10rem auto;
@@ -111,12 +122,16 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  
 }
 
 .homeButtons__touchdown,
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
+.resetButton,
 .awayButtons__fieldGoal {
   margin: 1rem;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
 }

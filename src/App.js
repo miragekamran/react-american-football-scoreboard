@@ -8,8 +8,6 @@ function App() {
 
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
-  const resetScores = setHomeScore && setAwayScore;
-  const homeAwayScores = homeScore && awayScore;
 
   return (
     <div className="container">
@@ -37,7 +35,7 @@ function App() {
           <button className="homeButtons__fieldGoal" onClick = { () => {setHomeScore(homeScore + 3)}}>Home Field Goal</button>
         </div>
         <div className="resetButton">
-          <button className="resetButton" onClick = { () => {resetScores(homeAwayScores * 2)}}>Reset Scores</button>
+          <button className="resetButton" onClick = { () => {setAwayScore(awayScore * 0); setHomeScore(homeScore * 0)}}>Reset Scores</button>
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick = { () => {setAwayScore(awayScore + 7)}}>Away Touchdown</button>
